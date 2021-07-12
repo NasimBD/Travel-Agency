@@ -1,0 +1,741 @@
+@import url("reset.css");
+
+*,
+*::before,
+*:after {
+    box-sizing: border-box;
+}
+
+
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.secondary-log-regi li:nth-child(2) {
+    position: relative;
+}
+
+.secondary-log-regi li:nth-child(2):after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 1px;
+    height: 10px;
+    background-color: hsla(0, 0%, 80%, 0.9);
+}
+
+.ul-1st-primary {
+    position: relative;
+}
+
+.menu .menu-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    opacity: 0;
+    z-index: 10;
+    width: 30px;
+    height: 26px;
+    cursor: pointer;
+}
+
+.menu-bars {
+    height: 26px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 2px;
+    z-index: 9;
+}
+
+.menu-bars>span {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    width: 25px;
+    height: 2px;
+    background-color: gray;
+    transition: 300ms;
+    transform-origin: center;
+}
+
+.menu-bars>span:nth-child(1) {
+    top: 4px;
+    right: 0;
+}
+
+.menu-bars>span:nth-child(2) {
+    top: 10px;
+    right: 0;
+}
+
+.menu-bars>span:nth-child(3) {
+    top: 16px;
+    right: 0;
+}
+
+.menu-button:checked~.menu-bars>span:nth-child(1) {
+    transform: translate(0, 5px) rotate(46deg) rotate(180deg);
+    background-color: hsl(0, 0%, 30%);
+}
+
+.menu-button:checked~.menu-bars>span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-button:checked~.menu-bars>span:nth-child(3) {
+    transform: translate(0, -6px)rotate(-46deg) rotate(-180deg);
+    background-color: hsl(0, 0%, 30%);
+}
+
+.menu-button:checked~.menu-items {
+    right: 0px;
+}
+
+header section {
+    font-size: 1.2rem;
+    color: white;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+header section h1 {
+    font-family: 'Carter One';
+}
+
+header section a.btn {
+    border-radius: 2rem;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+img.h-slider {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: slider-img 20s infinite;
+    opacity: 0;
+}
+
+.card,
+.card-img {
+    border-radius: 0;
+    border: 0;
+}
+
+.slider-card>img.h-slider:nth-of-type(1) {
+    animation-delay: 0s;
+}
+
+.slider-card>img.h-slider:nth-of-type(2) {
+    animation-delay: 4s;
+}
+
+.slider-card>img.h-slider:nth-of-type(3) {
+    animation-delay: 8s;
+}
+
+.slider-card>img.h-slider:nth-of-type(4) {
+    animation-delay: 12s;
+}
+
+.slider-card>img.h-slider:nth-of-type(5) {
+    animation-delay: 16s;
+}
+
+@keyframes slider-img {
+
+    1%,
+    20% {
+        opacity: 1;
+    }
+
+    25%,
+    100% {
+        opacity: 0;
+    }
+}
+
+.card-img-overlay {
+    background-color: hsla(0, 0%, 0%, 0.3);
+}
+
+
+.advantages-item:nth-child(1) {
+    background-color: #0085AE;
+}
+
+.advantages-item:nth-child(2) {
+    background-color: #0093C0;
+}
+
+.advantages-item:nth-child(3) {
+    background-color: #009FD0;
+}
+
+.advantages-item .item-icon {
+    border-radius: 50%;
+    font-size: 21px;
+}
+
+.advantages-item .item-text {
+    line-height: 1.9;
+    font-size: .9rem;
+}
+
+.advantages-item .item-text .item-title {
+    font-size: 1.2rem;
+}
+
+.traveling-easier p,
+.highlights p,
+.how-prefer p {
+    color: hsl(0, 0%, 48%);
+    width: 90%;
+    margin: auto;
+    line-height: 1.8;
+}
+
+.traveling-easier h2,
+.highlights h2,
+.how-prefer h2 {
+    color: hsl(0, 0%, 25%);
+    font-size: 2.1rem;
+    letter-spacing: 3px;
+}
+
+.traveling-browse {
+    color: white;
+    background-color: #28A5CB;
+    font-size: 0.9rem;
+    padding: 15px 25px;
+    border-radius: 20px;
+    display: inline-block;
+    position: relative;
+}
+
+.traveling-browse:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.traveling-browse .fa {
+    display: none;
+    padding: 3px;
+}
+
+.traveling-browse:hover .fa {
+    display: inline;
+}
+
+.highlights-items {
+    width: 100%;
+}
+
+.highlights-item {
+    margin: 0.5%;
+    position: relative;
+}
+
+.highlights-item img {
+    width: 100%;
+}
+
+.highlights-item .highlights-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+    line-height: 1.5;
+}
+
+.highlights-item:hover .highlights-overlay {
+    opacity: 0;
+    transition: 500ms;
+}
+
+.highlights-item:nth-child(2) .highlights-overlay::after,
+.highlights-item:nth-child(6) .highlights-overlay::after {
+    content: "Sale!";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    background-color: #28A5CB;
+    color: white;
+    font-weight: bold;
+    z-index: 7;
+    text-align: center;
+    line-height: 40px;
+}
+
+.how-prefer-items {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.how-prefer-item:nth-child(1) {
+    position: relative;
+    max-height: 350px;
+    width: 80%;
+}
+
+
+.how-prefer-item:not(:nth-child(1)) {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    transition: 300ms;
+    width: 80%;
+    overflow: hidden;
+}
+
+
+.how-prefer-item::before,
+.how-prefer-item::after {
+    position: absolute;
+    left: 0;
+    width: 21%;
+}
+
+
+
+.how-prefer-item::before {
+    content: "";
+    top: 0;
+    background-color: hsla(0, 0%, 20%, 0.5);
+    height: 100%;
+    z-index: 0;
+
+}
+
+.how-prefer-item::after {
+    content: attr(data-prefer);
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 28px;
+    color: white;
+    text-align: center;
+
+}
+
+
+.how-prefer-item img {
+    width: 100%;
+    height: 100%;
+}
+
+.subscribe {
+    background-color: hsl(194, 85%, 42%);
+    color: white;
+    width: 100%;
+}
+
+.subscribe h2 {
+    letter-spacing: 3px;
+    line-height: 1.3;
+}
+
+.subscribe input {
+    font-size: 1rem;
+    height: 45px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 2px;
+    font-weight: bold;
+    width: 32%;
+
+}
+
+.subscribe input:not(:last-of-type) {
+    background-color: hsla(0, 0%, 30%, 0.3);
+    border: solid 1px hsla(0, 0%, 99%, 0.9);
+}
+
+.subscribe input::placeholder {
+    color: hsla(0, 0%, 99%, 0.8);
+}
+
+.subscribe input:last-of-type {
+    background-color: white;
+    color: hsl(194, 85%, 42%);
+    border: solid 1px white;
+}
+
+.subscribe .elevator {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    z-index: 7;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    opacity: 0.5;
+    background-color: hsl(193, 85%, 45%);
+    border-radius: 3px;
+    transition: 300ms;
+    color: white;
+
+}
+
+.subscribe .elevator:hover {
+    background-color: hsla(0, 0%, 100%, 0.9);
+    color: hsl(193, 85%, 45%);
+}
+
+
+footer {
+    background-color: hsl(193, 85%, 45%);
+}
+
+footer span,
+footer a {
+    color: white;
+}
+
+/* Media -----------------------------------------*/
+
+/* 1 ----------------------------------*/
+@media screen and (max-width:768px) {
+    html {
+        font-size: 14px;
+
+    }
+
+    .secondary {
+        background-color: white;
+        border-bottom: 1px solid hsl(0, 0%, 70%);
+    }
+
+    .secondary,
+    .secondary-log-regi a {
+        color: gray;
+    }
+
+
+    .secondary-log-regi a:hover {
+        color: lightgray;
+    }
+
+    .primary {
+        background-color: white;
+    }
+
+    a.logoContainer {
+        content: url("../images/logo-large.png");
+        width: 300px;
+    }
+
+    .menu-button:checked~.menu-items {
+        display: block;
+        right: 0px;
+    }
+
+    .menu-items {
+        position: fixed;
+        top: 0;
+        right: -400px;
+        width: 400px;
+        height: 100vh;
+        padding: 100px 0px;
+        z-index: 8;
+        background-color: white;
+        transition: 800ms;
+        overflow: auto;
+    }
+
+
+    .menu-items>li>a,
+    .menu-items>li>ul>li a {
+        display: block;
+        padding: 15px 50px;
+        text-decoration: none;
+        border-bottom: solid 1px lightgray;
+        color: dimgray
+    }
+
+    .menu-items>li>ul>li a {
+        padding: 15px 70px;
+    }
+
+    .menu-items>li>ul>li a::before {
+        content: "\002d";
+        padding-right: 5px;
+        color: lightgray;
+    }
+
+    .fa-search {
+        color: gray;
+        font-size: 17px;
+        position: relative;
+        z-index: 9;
+    }
+
+
+    header section h1 {
+        font-size: 3rem;
+    }
+
+
+    .advantages-item {
+        padding: 80px;
+    }
+
+    .highlights-item {
+        width: 49%;
+    }
+
+    .subscribe>div {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+
+    .subscribe .elevator {
+        display: none;
+    }
+}
+
+
+
+/* 2 ---------------------------------*/
+@media screen and (min-width:768px) and (max-width:991px) {
+    html {
+        font-size: 15px;
+    }
+
+    .secondary {
+        background-color: hsl(193, 85%, 45%);
+        border-bottom: 1px solid hsl(0, 0%, 90%);
+    }
+
+    .secondary,
+    .secondary-log-regi a {
+        color: white;
+    }
+
+    .secondary,
+    .secondary-log-regi a:hover {
+        color: hsl(0, 0%, 90%);
+    }
+
+    .primary {
+        background-color: hsl(193, 85%, 45%);
+    }
+
+    a.logoContainer {
+        content: url("../images/logo-large-white.png");
+        width: 300px;
+    }
+
+    .menu-button:checked~.menu-items {
+        display: block;
+        right: 0px;
+    }
+
+    .menu-items {
+        position: fixed;
+        top: 0;
+        right: -400px;
+        width: 400px;
+        height: 100vh;
+        padding: 100px 0px;
+        z-index: 8;
+        background-color: white;
+        transition: 800ms;
+        overflow: auto;
+    }
+
+
+    .menu-items>li>a,
+    .menu-items>li>ul>li a {
+        display: block;
+        padding: 15px 50px;
+        text-decoration: none;
+        border-bottom: solid 1px lightgray;
+        color: dimgray
+    }
+
+    .menu-items>li>ul>li a {
+        padding: 15px 70px;
+    }
+
+    .menu-items>li>ul>li a::before {
+        content: "\002d";
+        padding-right: 5px;
+        color: lightgray;
+    }
+
+    .fa-search {
+        color: gray;
+        font-size: 17px;
+        position: relative;
+        z-index: 9;
+    }
+
+    header section h1 {
+        font-size: 3.5rem;
+    }
+
+    .advantages-item {
+        width: 33.3333%;
+        padding: 40px 30px;
+    }
+
+    .highlights-item {
+        width: 32.3333%;
+    }
+
+    .subscribe>div {
+        width: 55%;
+    }
+}
+
+/* 3 ----------------------------------*/
+@media screen and (min-width:992px) {
+    html {
+        font-size: 16px;
+    }
+
+    body {
+        margin-top: -1px;
+    }
+
+
+    .secondary {
+        background: transparent;
+        border-bottom: 1px solid hsl(0, 0%, 90%);
+        color: white;
+        font-weight: bold;
+        font-size: 11px;
+    }
+
+    .secondary-log-regi a {
+        color: white;
+        font-weight: bold;
+        font-size: 11px;
+    }
+
+    a.logoContainer {
+        content: url("../images/logo-large-white.png");
+        width: 210px;
+    }
+
+    a.logoContainerScroll {
+        content: url('../images/logo-large.png');
+    }
+
+    .menu-button,
+    .menu-bars {
+        display: none;
+    }
+
+    .menu-items {
+        display: flex;
+        flex-flow: row nowrap;
+    }
+
+
+    .menu-items>li>a {
+        display: inline-block;
+        padding: 15px;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    .menu-items>li:nth-child(2) {
+        position: relative;
+    }
+
+    .destinations {
+        display: none;
+        position: absolute;
+        top: 40px;
+        left: 0;
+        background-color: white;
+    }
+
+    .menu-items>li:nth-child(2):hover .destinations {
+        display: block;
+    }
+
+    .destinations a {
+        display: block;
+        width: 150px;
+        padding: 10px 15px;
+        text-decoration: none;
+        color: dimgray;
+        font-size: 12px;
+    }
+
+
+    .fa-search {
+        color: white;
+        font-size: 13px;
+    }
+
+    nav.secondary {
+        width: 100%;
+        position: absolute;
+        top: 0px;
+        z-index: 1;
+    }
+
+    nav.primary {
+        position: fixed;
+        width: 100%;
+        top: 50px;
+        z-index: 11;
+        transition: 200ms;
+    }
+
+    nav.primaryOnScroll {
+        background-color: white;
+        top: 0;
+    }
+
+    nav.primaryOnScroll a {
+        color: gray;
+    }
+
+    header section {
+        margin-top: 60px;
+    }
+
+    header section h1 {
+        font-size: 4rem;
+    }
+
+    .advantages-item {
+        width: 33.3333%;
+        padding: 80px 50px;
+    }
+
+    .highlights-item {
+        width: 32.3333%;
+    }
+
+    .subscribe>div {
+        width: 55%;
+    }
+
+}
